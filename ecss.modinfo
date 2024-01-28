@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="772960cc-ddaf-4432-870c-e97d698d7011" version="1.0">
+    <Properties>
+        <Name>LOC_ECSS_MOD_TITLE</Name>
+        <Teaser>LOC_ECSS_MOD_TEASER</Teaser>
+        <Description>LOC_ECSS_MOD_DESCRIPTION</Description>
+        <Authors>LOC_ECSS_MOD_AUTHORS</Authors>
+        <SpecialThanks>LOC_ECSS_MOD_SPECIALTHANKS</SpecialThanks>
+		<Stability>Beta</Stability>
+		<CompatibleVersions>2.0</CompatibleVersions>
+    </Properties>
+	<References>
+		<Mod id="1B28771A-C749-434B-9053-D1380C553DE9" title="LOC_EXPANSION1_MOD_TITLE"/>
+		<Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="LOC_EXPANSION2_MOD_TITLE"/>
+	</References>
+	<Dependencies>
+		<Mod id="29dfeca5-042a-4259-853d-61f554851af7" title="Enhanced Community FrontEnd"/>
+	</Dependencies>
+    <ActionCriteria>
+		<Criteria id="ECSS" any="1">
+			<RuleSetInUse>RULESET_STANDARD,RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse>
+		</Criteria>
+	</ActionCriteria>
+    <FrontEndActions>
+    </FrontEndActions>
+    <InGameActions>
+    </InGameActions>
+    <LocalizedText>
+		<Text id="LOC_ECSS_MOD_TITLE">
+			<en_US>Enhanced City-States Selection</en_US>
+			<es_ES></es_ES>
+			<fr_FR></fr_FR>
+		</Text>
+		<Text id="LOC_ECSS_MOD_TEASER">
+			<en_US>Enables additional City-States placement options.</en_US>
+			<es_ES></es_ES>
+			<fr_FR></fr_FR>
+		</Text>
+		<Text id="LOC_ECSS_MOD_DESCRIPTION">
+			<en_US>Increases the default amount of City-States to 2x the default number of Players on each built-in Map size.[NEWLINE][NEWLINE]Increases the maximum amount of City-States to 2x the maximum number of Players on each built-in Map size.[NEWLINE][NEWLINE]Enables prioritization of City-State placement via the City-States picker. Prioritized City-States will be assigned to available Player slots before other selections, up to the amount selected with the slider.</en_US>
+			<es_ES></es_ES>
+			<fr_FR></fr_FR>
+		</Text>
+		<Text id="LOC_ECSS_MOD_AUTHORS">
+			<en_US>zzragnar0kzz</en_US>
+			<es_ES>zzragnar0kzz</es_ES>
+			<fr_FR>zzragnar0kzz</fr_FR>
+		</Text>
+		<Text id="LOC_ECSS_MOD_SPECIALTHANKS">
+			<en_US>The Community</en_US>
+			<es_ES>La Comunidad</es_ES>
+			<fr_FR>La Communauté</fr_FR>
+		</Text>
+	</LocalizedText>
+    <Files>
+    </Files>
+</Mod>
