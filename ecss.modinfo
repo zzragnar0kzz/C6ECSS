@@ -22,8 +22,52 @@
 		</Criteria>
 	</ActionCriteria>
     <FrontEndActions>
+        <UpdateText id="ECSS_CONFIGURATION_TEXT">
+			<!-- this needs to load RFL -->
+			<Properties>
+        		<LoadOrder>2000000</LoadOrder>
+      		</Properties>
+			<!-- EN_US localized frontend text -->
+			<File>ecss/localization/en_us/frontend_text.xml</File>
+			<!-- ES_ES localized frontend text -->
+			<File>ecss/localization/es_es/frontend_text.xml</File>
+			<!-- FR_FR localized frontend text -->
+			<File>ecss/localization/fr_fr/frontend_text.xml</File>
+		</UpdateText>
+		<ImportFiles id="ECSS_CONFIGURATION_UI">
+			<!-- this needs to load RFL -->
+			<Properties>
+        		<LoadOrder>2000001</LoadOrder>
+      		</Properties>
+			<Items>
+                <!-- advanced setup replacements -->
+				<File>ecss/ui/advancedsetup_ecss.lua</File>
+				<!-- city-state picker -->
+				<File>ecss/ui/citystatepicker.lua</File>
+				<File>ecss/ui/citystatepicker.xml</File>
+				<!-- game setup logic replacements -->
+				<File>ecss/ui/gamesetuplogic_ecss.lua</File>
+			</Items>
+		</ImportFiles>
+		<UpdateDatabase id="ECSS_CONFIGURATION_DATABASE">
+			<!-- this needs to load RFL -->
+			<Properties>
+        		<LoadOrder>2000002</LoadOrder>
+      		</Properties>
+			<!-- configuration database changes -->
+			<File Priority="2">ecss/configuration/frontend.sql</File>
+			<File Priority="1">ecss/configuration/frontend.xml</File>
+        </UpdateDatabase>
     </FrontEndActions>
     <InGameActions>
+        <ImportFiles id="ECSS_YNAMP_LOAD_DATABASE" criteria="ECSS">
+			<!-- this needs to load RFL -->
+			<Properties>
+        		<LoadOrder>2000001</LoadOrder>
+      		</Properties>
+			<!-- load ECSS frontend scripts here for YnAMP compatibility -->
+			<File>ecss/ui/gamesetuplogic_ecss.lua</File>
+		</ImportFiles>
     </InGameActions>
     <LocalizedText>
 		<Text id="LOC_ECSS_MOD_TITLE">
@@ -32,7 +76,7 @@
 			<fr_FR></fr_FR>
 		</Text>
 		<Text id="LOC_ECSS_MOD_TEASER">
-			<en_US>Enables additional City-States placement options.</en_US>
+			<en_US>Enables additional City-State placement options.</en_US>
 			<es_ES></es_ES>
 			<fr_FR></fr_FR>
 		</Text>
@@ -53,5 +97,21 @@
 		</Text>
 	</LocalizedText>
     <Files>
+        <!-- configuration database changes -->
+		<File>ecss/configuration/frontend.sql</File>
+		<File>ecss/configuration/frontend.xml</File>
+        <!-- EN_US localized frontend text -->
+		<File>ecss/localization/en_us/frontend_text.xml</File>
+		<!-- ES_ES localized frontend text -->
+		<File>ecss/localization/es_es/frontend_text.xml</File>
+		<!-- FR_FR localized frontend text -->
+		<File>ecss/localization/fr_fr/frontend_text.xml</File>
+        <!-- advanced setup replacements -->
+		<File>ecss/ui/advancedsetup_ecss.lua</File>
+        <!-- city-state picker -->
+		<File>ecss/ui/citystatepicker.lua</File>
+		<File>ecss/ui/citystatepicker.xml</File>
+        <!-- game setup logic replacements -->
+		<File>ecss/ui/gamesetuplogic_ecss.lua</File>
     </Files>
 </Mod>
